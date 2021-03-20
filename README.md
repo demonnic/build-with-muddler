@@ -6,7 +6,7 @@ A github action to build your Mudlet project with muddler
 
 Name | Description | Default
 --- | --- | ---
-muddlerVersion | the version of Muddler to use | 0.5
+muddlerVersion | the version of Muddler to use | LATEST
 
 ## Usage Example
 
@@ -15,7 +15,7 @@ It will be a .zip file, due to limitations on github's end.
 Also:
 
 * Replace MyCoolPackageName with something more appropriate to your project
-* I include muddlerVersion only to show *how* to include it. It will default to the latest stable release of muddler (displayed above)
+* I include muddlerVersion only to show *how* to include it. It will default to the latest stable release of muddler.
 * If the main/default branch of your repository is something other than `main` you should change that on the branches lines below
 
 ```yaml
