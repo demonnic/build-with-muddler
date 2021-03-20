@@ -9,6 +9,7 @@ inputs:
     required: false
     default: '0.5'
 runs:
-  using: "composite"      
-    run: ${{ github.action_path }}/muddle.sh
-    shell: bash
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/muddle.sh
+      shell: bash
