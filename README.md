@@ -4,15 +4,11 @@ A github action to build your Mudlet project with muddler
 
 ## Inputs
 
----
-
 Name | Description | Default
 --- | --- | ---
 muddlerVersion | the version of Muddler to use | 0.5
 
 ## Usage Example
-
----
 
 The following example is setup as one might setup for CI to create and upload the mpackage as an artifact.
 It will be a .zip file, due to limitations on github's end.
