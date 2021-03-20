@@ -10,6 +10,5 @@ inputs:
     default: '0.5'
 runs:
   using: "composite"      
-    - name: Retrieve muddler and muddle package
-      run: ${{ github.action_path }}/muddle.sh
-      shell: bash
+    run: ${{ github.action_path }}/muddle.sh
+    shell: bash
