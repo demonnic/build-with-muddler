@@ -16,6 +16,7 @@ Also:
 
 * Replace MyCoolPackageName with something more appropriate to your project
 * I include muddlerVersion only to show *how* to include it. It will default to the latest stable release of muddler.
+  * If you want to explicitly call out that you are using the latest version in your action, use "LATEST" for the version.
 * If the main/default branch of your repository is something other than `main` you should change that on the branches lines below
 
 ```yaml
