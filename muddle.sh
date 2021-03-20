@@ -1,4 +1,5 @@
 cd $GITHUB_WORKSPACE
+echo "Using Muddler version: $INPUT_MUDDLERVERSION"
 curl -L https://github.com/demonnic/muddler/releases/download/0.5/muddle-shadow-$INPUT_MUDDLERVERSION.tar --output muddler.tar
 mkdir muddler-tmp
 tar xf muddler.tar -C muddler-tmp
