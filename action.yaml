@@ -11,5 +11,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/muddle.sh
+    - run: ${{ github.action_path }}/muddle.sh ${{ inputs.muddlerVersion }}
       shell: bash
