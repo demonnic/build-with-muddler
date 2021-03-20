@@ -26,10 +26,12 @@ runs:
         tar xf muddler.tar -C muddler-tmp
         mv muddler-tmp/muddle-shadow-${{ steps.muddler-version.outputs.release }} muddler
         rm -rf muddler-tmp muddler.tar
+      shell: bash
       
     - name: Build package with muddler
       run: |
         muddler/bin/muddle
+      shell: bash
       
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
