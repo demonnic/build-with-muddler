@@ -4,7 +4,7 @@ branding:
   icon: 'package'
   color: 'orange'
 inputs:
-  muddler-version:
+  muddlerVersion:
     description: 'Version of muddler to use'
     required: false
     default: '0.5'
