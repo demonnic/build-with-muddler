@@ -1,6 +1,6 @@
 # build-with-muddler
 
-A github action to build your Mudlet project with muddler
+A github action to build your Mudlet project with [muddler](https://github.com/demonnic/muddler)
 
 ## Inputs
 
