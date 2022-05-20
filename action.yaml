@@ -11,5 +11,22 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/muddle.sh ${{ inputs.muddlerVersion }}
+    - name: Set muddler version
+      run: ${{ github.action_path }}/set-muddler-version.sh ${{ inputs.muddlerVersion }}
+      shell: bash
+    
+    - name: Restore muddler from cache
+      uses: actions/cache@v3
+      id: cache-muddler
+      with:
+        path: /tmp/muddler
+        key: muddler-${{ env.MUDDLER_VERSION }}
+    
+    - name: download muddler
+      if: steps.cache-muddler.outputs.cache-hit != 'true'
+      run: ${{ github.action_path }}/download-muddler.sh ${{ env.MUDDLER_VERSION }}
+      shell: bash
+
+    - name: Run muddler
+      run: ${{ github.action_path }}/muddle.sh
       shell: bash
