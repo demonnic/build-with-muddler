@@ -8,6 +8,10 @@ inputs:
     description: 'Version of muddler to use'
     required: false
     default: 'LATEST'
+  workingDir:
+    description: 'What directory to run muddler in.'
+    required: false
+    default: ${{ github.workspace }}
 runs:
   using: "composite"
   steps:
@@ -28,5 +32,5 @@ runs:
       shell: bash
 
     - name: Run muddler
-      run: ${{ github.action_path }}/muddle.sh
+      run: cd ${{inputs.workingDir}} && ${{ github.action_path }}/muddle.sh
       shell: bash
