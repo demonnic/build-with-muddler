@@ -7,6 +7,7 @@ A github action to build your Mudlet project with [muddler](https://github.com/d
 Name | Description | Default
 --- | --- | ---
 muddlerVersion | the version of Muddler to use | LATEST
+workingDir | what directory to run muddler in | ${{ github.workspace }}
 
 ## Usage Example
 
