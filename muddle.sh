@@ -1,5 +1,3 @@
-cd $GITHUB_WORKSPACE
-
 /tmp/muddler/bin/muddle
 EXIT_CODE=$?
 if [ $EXIT_CODE -ne 0 ]; then
